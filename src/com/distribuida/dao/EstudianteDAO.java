@@ -1,0 +1,16 @@
+package com.distribuida.dao;
+
+import java.util.List;
+
+import com.distribuida.entities.Estudiante;
+
+public interface EstudianteDAO {
+	public interface CursoDAO {
+
+		public List<Estudiante> findAll();
+		public Estudiante findOne(int id);
+		public void add(Estudiante estudiante);
+		public void up(Estudiante estudiante);
+		public void del(int id);
+		
+	}}
