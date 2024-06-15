@@ -6,6 +6,7 @@ public class Prerrequisito {
 	private int idPrerrequisito;
 	private String numcurso;
 	private String numprerrequisito;
+	private Curso curso;
 	
 	public Prerrequisito () {}
 

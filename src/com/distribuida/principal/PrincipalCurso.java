@@ -10,8 +10,7 @@ import com.distribuida.entities.Curso;
 public class PrincipalCurso {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//Patron de IoC o Inversion de control
+
 		ClassPathXmlApplicationContext context =new ClassPathXmlApplicationContext("ApplicationContext.xml");
 
 		CursoDAO cursoDAO =context.getBean("cursoDAOImpl",CursoDAO.class);

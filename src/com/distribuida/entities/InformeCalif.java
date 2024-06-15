@@ -5,10 +5,12 @@ public class InformeCalif {
 	
 	private int idInformeCalif;
 	private String NumEstudiante;
+	private Estudiante estudiante;
 	private String IDSeccion;
+	private Seccion seccion;
 	private String Nota;
 	
-	
+ 
 	
 	public InformeCalif () {}
 

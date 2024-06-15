@@ -4,6 +4,7 @@ public class Seccion {
 	private int idSeccion;
 	private String nSeccion;
 	private String numCurso;
+	private Curso curso;
 	private String semestre;
 	private String año;
 	private String profesor;
