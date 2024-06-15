@@ -5,53 +5,78 @@ public class InformeCalif {
 	
 	private int idInformeCalif;
 	private String NumEstudiante;
+	private String IDSeccion;
 	private String Nota;
 	
 	
 	
 	public InformeCalif () {}
 
-	public InformeCalif(int idInformeCalif, String numEstudiante, String nota, InformeCalif informecalif) {
-		
+
+
+	public InformeCalif(int idInformeCalif, String numEstudiante, String iDSeccion, String nota) {
+	
 		this.idInformeCalif = idInformeCalif;
-		this.NumEstudiante = numEstudiante;
-		this.Nota = nota;
-		
+		NumEstudiante = numEstudiante;
+		IDSeccion = iDSeccion;
+		Nota = nota;
 	}
+
+
 
 	public int getIdInformeCalif() {
 		return idInformeCalif;
 	}
 
+
+
 	public void setIdInformeCalif(int idInformeCalif) {
 		this.idInformeCalif = idInformeCalif;
 	}
+
+
 
 	public String getNumEstudiante() {
 		return NumEstudiante;
 	}
 
+
+
 	public void setNumEstudiante(String numEstudiante) {
 		NumEstudiante = numEstudiante;
 	}
+
+
+
+	public String getIDSeccion() {
+		return IDSeccion;
+	}
+
+
+
+	public void setIDSeccion(String iDSeccion) {
+		IDSeccion = iDSeccion;
+	}
+
+
 
 	public String getNota() {
 		return Nota;
 	}
 
+
+
 	public void setNota(String nota) {
 		Nota = nota;
 	}
 
-	
-	
+
 
 	@Override
 	public String toString() {
-		return "InformeCalif [idInformeCalif=" + idInformeCalif + ", NumEstudiante=" + NumEstudiante + ", Nota=" + Nota
-				+ ", informecalif="  + "]";
+		return "InformeCalif [idInformeCalif=" + idInformeCalif + ", NumEstudiante=" + NumEstudiante + ", IDSeccion="
+				+ IDSeccion + ", Nota=" + Nota + "]";
 	}
-	
 	
 	
 	
