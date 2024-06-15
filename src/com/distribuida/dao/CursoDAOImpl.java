@@ -24,7 +24,7 @@ public class CursoDAOImpl implements CursoDAO {
 	public List<Curso> findAll() {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("from Autor",Curso.class).getResultList();
+		return session.createQuery("from Curso",Curso.class).getResultList();
 	}
 
 @Override

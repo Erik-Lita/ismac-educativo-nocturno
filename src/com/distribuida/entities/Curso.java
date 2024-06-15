@@ -1,19 +1,37 @@
 package com.distribuida.entities;
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+ 
+import org.springframework.stereotype.Component;
+ 
+@Component
+@Entity
+@Table(name = "curso")
 public class Curso {
 
-	
-	private int idCurso;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id_Curso")
+	private int id_Curso;
+	@Column(name="NombreCurso")
 	private String NombreCurso;
+	@Column(name="NumCurso")
 	private String NumCurso;
+	@Column(name="Horas")
 	private String Horas;
+	@Column(name="Departamento")
 	private String Departamento;
 	
 	public Curso () {}
+	
 
 	public Curso(int idCurso, String nombreCurso, String numCurso, String horas, String departamento) {
 		
-		this.idCurso = idCurso;
+		this.id_Curso = idCurso;
 		this.NombreCurso = nombreCurso;
 		this.NumCurso = numCurso;
 		this.Horas = horas;
@@ -21,11 +39,11 @@ public class Curso {
 	}
 
 	public int getIdCurso() {
-		return idCurso;
+		return id_Curso;
 	}
 
 	public void setIdCurso(int idCurso) {
-		this.idCurso = idCurso;
+		this.id_Curso = idCurso;
 	}
 
 	public String getNombreCurso() {
@@ -62,7 +80,7 @@ public class Curso {
 
 	@Override
 	public String toString() {
-		return "Curso [idCurso=" + idCurso + ", NombreCurso=" + NombreCurso + ", NumCurso=" + NumCurso + ", Horas="
+		return "Curso [idCurso=" + id_Curso + ", NombreCurso=" + NombreCurso + ", NumCurso=" + NumCurso + ", Horas="
 				+ Horas + ", Departamento=" + Departamento + "]";
 	}
 

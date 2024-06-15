@@ -1,59 +1,85 @@
 package com.distribuida.entities;
-
+ 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+ 
+import org.springframework.stereotype.Component;
+ 
+@Component
+@Entity
+@Table(name = "estudiante")
 public class Estudiante {
-
+ 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="idestudiante")
 	private int idEstudiante;
-	private String Nombre;
-	private String NumEstudiante;
-	private String Clase;
-	
+	@Column(name="nombre")
+	private String nombre;
+	@Column(name="numEstudiante")
+	private String numEstudinate;
+	@Column(name="clase")
+	private String clase;
+	@Column(name="especialidad")
+	private String especialidad;
 	public Estudiante () {}
-
-	public Estudiante(int idEstudiante, String nombre, String numEstudiante, String clase) {
-	
+ 
+	public Estudiante(int idEstudiante, String nombre, String numEstudinate, String clase, String especialidad) {
 		this.idEstudiante = idEstudiante;
-		this.Nombre = nombre;
-		this.NumEstudiante = numEstudiante;
-		this.Clase = clase;
+		this.nombre = nombre;
+		this.numEstudinate = numEstudinate;
+		this.clase = clase;
+		this.especialidad = especialidad;
 	}
-
+ 
 	public int getIdEstudiante() {
 		return idEstudiante;
 	}
-
+ 
 	public void setIdEstudiante(int idEstudiante) {
 		this.idEstudiante = idEstudiante;
 	}
-
+ 
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
-
+ 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		this.nombre = nombre;
 	}
-
-	public String getNumEstudiante() {
-		return NumEstudiante;
+ 
+	public String getNumEstudinate() {
+		return numEstudinate;
 	}
-
-	public void setNumEstudiante(String numEstudiante) {
-		NumEstudiante = numEstudiante;
+ 
+	public void setNumEstudinate(String numEstudinate) {
+		this.numEstudinate = numEstudinate;
 	}
-
+ 
 	public String getClase() {
-		return Clase;
+		return clase;
 	}
-
+ 
 	public void setClase(String clase) {
-		Clase = clase;
+		this.clase = clase;
 	}
-
+ 
+	public String getEspecialidad() {
+		return especialidad;
+	}
+ 
+	public void setEspecialidad(String especialidad) {
+		this.especialidad = especialidad;
+	}
+ 
 	@Override
 	public String toString() {
-		return "Curso [idEstudiante=" + idEstudiante + ", Nombre=" + Nombre + ", NumEstudiante=" + NumEstudiante
-				+ ", Clase=" + Clase + "]";
+		return "Estudiante [idEstudiante=" + idEstudiante + ", nombre=" + nombre + ", numEstudinate=" + numEstudinate
+				+ ", clase=" + clase + ", especialidad=" + especialidad + "]";
 	}
-	
-	
+
 }

@@ -6,7 +6,8 @@ public class InformeCalif {
 	private int idInformeCalif;
 	private String NumEstudiante;
 	private String Nota;
-	private InformeCalif informecalif;
+	
+	
 	
 	public InformeCalif () {}
 
@@ -15,7 +16,7 @@ public class InformeCalif {
 		this.idInformeCalif = idInformeCalif;
 		this.NumEstudiante = numEstudiante;
 		this.Nota = nota;
-		this.informecalif = informecalif;
+		
 	}
 
 	public int getIdInformeCalif() {
@@ -42,18 +43,13 @@ public class InformeCalif {
 		Nota = nota;
 	}
 
-	public InformeCalif getInformecalif() {
-		return informecalif;
-	}
-
-	public void setInformecalif(InformeCalif informecalif) {
-		this.informecalif = informecalif;
-	}
+	
+	
 
 	@Override
 	public String toString() {
 		return "InformeCalif [idInformeCalif=" + idInformeCalif + ", NumEstudiante=" + NumEstudiante + ", Nota=" + Nota
-				+ ", informecalif=" + informecalif + "]";
+				+ ", informecalif="  + "]";
 	}
 	
 	

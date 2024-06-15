@@ -14,7 +14,7 @@ public class PrincipalCurso {
 		//Patron de IoC o Inversion de control
 		ClassPathXmlApplicationContext context =new ClassPathXmlApplicationContext("ApplicationContext.xml");
 
-		CursoDAO cursoDAO =context.getBean("clienteDAOImpl",CursoDAO.class);
+		CursoDAO cursoDAO =context.getBean("cursoDAOImpl",CursoDAO.class);
 		List <Curso> curso=cursoDAO.findAll();
 		curso.forEach(item ->{
 			
