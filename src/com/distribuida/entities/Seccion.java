@@ -17,6 +17,8 @@ public class Seccion {
 		this.semestre = semestre;
 		this.año = año;
 		this.profesor= profesor;
+		
+		
 	}
 	public int getIdSeccion() {
 		return idSeccion;
